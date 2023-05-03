@@ -1,0 +1,27 @@
+openapi: 3.0.0
+info:
+  title: Sample API
+  version: 1.0.0
+servers:
+- url: https://d5do9fk5jkq1o1kf5ic5.apigw.yandexcloud.net
+- url: https://api.mnsky.ru
+paths:
+  /:
+    get:
+      x-yc-apigateway-integration:
+        type: dummy
+        content:
+          '*': API Gataway
+        http_code: 200
+        http_headers:
+          Content-Type: text/plain
+  /test:
+    get:
+      x-yc-apigateway-integration:
+        type: dummy
+        content:
+          '*': test is ok
+        http_code: 200
+        http_headers:
+          Content-Type: text/plain
+
